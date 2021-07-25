@@ -10,15 +10,15 @@
         <img slot="item-icon-active" src="~assets/img/Home/downbar/category_active.png" alt="">
         <div slot="item-text">分类</div>
       </tab-bar-item>
-      <tab-bar-item path="cart" activeColor="pink">
-        <img slot="item-icon" src="~assets/img/Home/downbar/cart.png" alt="">
-        <img slot="item-icon-active" src="~assets/img/Home/downbar/cart_active.png" alt="">
-        <div slot="item-text">购物车</div>
+      <tab-bar-item path="/cart" activeColor="pink">
+        <img slot="item-icon" src="~assets/img/Home/downbar/like.svg" alt="">
+        <img slot="item-icon-active" src="~assets/img/Home/downbar/like_active.svg" alt="">
+        <div slot="item-text">收藏</div>
       </tab-bar-item>
-      <tab-bar-item path="profile" activeColor="pink">
+      <tab-bar-item path="/profile" activeColor="pink">
         <img slot="item-icon" src="~assets/img/Home/downbar/profile.png" alt="">
         <img slot="item-icon-active" src="~assets/img/Home/downbar/profile_active.png" alt="">
-        <div slot="item-text">我的</div>
+        <div slot="item-text">个人中心</div>
       </tab-bar-item>
   </tab-bar>
 </template>
@@ -36,5 +36,5 @@ export default {
 </script>
 
 <style scoped>
-
+  
 </style>

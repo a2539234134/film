@@ -25,13 +25,14 @@ export default {
   },
   methods:{
     getBlack(){
-      this.$router.push('/home')
+      // 返回至上一个页面
+      this.$router.go(-1)
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .search-wrapper{
     background-image: linear-gradient(
       to right bottom,
@@ -40,18 +41,14 @@ export default {
     );
   }
 
-  .left-bar{
-    width: 3rem;
-    height: 100%;
-    margin-left: 1rem;
-    position: relative;
+  .left-bar{ 
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    img{
+      width: 50/40rem;
+    }
   }
-
-  .left-bar img{
-    width: 2rem;
-    height: 3rem;
-  }
-
   .center-bar{
     color:white;
     font-weight: 650;

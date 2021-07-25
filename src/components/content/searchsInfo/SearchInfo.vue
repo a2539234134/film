@@ -1,9 +1,9 @@
 <template>
 <div>
-    <div class="in-search clearfix">
+  <div class="in-search">
     <div class="into-search">
         <i></i>
-        <input class="inp" type="text" placeholder="搜索商品">
+        <input class="inp" type="text" placeholder="搜索商品" autofocus>
         <button class="btn">搜索</button>
     </div>
   </div>
@@ -13,61 +13,67 @@
     <span class="font-spans">猜你想搜</span>
     <ul class="books-Infos">
       <li>1
-        <a href="javascript:;">
-          《活着》余华著，大热门书籍
+        <a href="https://movie.douban.com/subject/1292052/">
+          《肖生克的救赎》弗兰克·德拉邦特励志救赎
           <span class="infos-bao">爆</span>
         </a>
       </li>
       <li>2
-        <a href="javascript:;">
-          《少年读史记》张嘉骅著，新晋书籍
-          <span class="infos-new">新</span>
+        <a href="https://movie.douban.com/subject/1291546/">
+          《霸王别姬》陈凯歌高端巨作
+          <span class="infos-bao">爆</span>
         </a>
       </li>
       <li>3
-        <a href="javascript:;">
-          《百年孤独》加西亚·马尔克斯著
-          <span class="infos-hot">热</span>
+        <a href="https://movie.douban.com/subject/1292720/">
+          《阿甘正传》罗伯特·泽米吉斯导绎励志一生
+          <span class="infos-bao">爆</span>
         </a>
       </li>
       <li>4
-        <a href="javascript:;">
-          《千与千寻》宫崎骏著
+        <a href="https://movie.douban.com/subject/1295644/">
+          《这个杀手不太冷》吕克·贝松两人彼此相依的故事
           <span class="infos-hot">热</span>
         </a>
       </li>
       <li>5
-        <a href="javascript:;">
-          《红星照耀中国》埃德加·斯诺著
+        <a href="https://movie.douban.com/subject/1292722/">
+          《泰坦尼克号》詹姆斯·卡梅隆轮船沉海爱情永存
+          <span class="infos-hot">热</span>
         </a>
       </li>
       <li>6
-        <a href="javascript:;">
-          《三体》刘慈欣著，展望未来世界三体
+        <a href="https://movie.douban.com/subject/1292063/">
+          《美丽人生》罗伯托·贝尼尼讲述最美的谎言
+          <span class="infos-new">新</span>
         </a>
       </li>
       <li>7
-        <a href="javascript:;">
-          《杀死一只知更鸟》哈珀·李著
+        <a href="https://movie.douban.com/subject/1291561/">
+          《千与千寻》宫崎骏奇幻巨作
+          <span class="infos-bao">爆</span>
         </a>
       </li>
       <li>8
-        <a href="javascript:;">
-          《虫洞书简》王溢嘉著
+        <a href="https://movie.douban.com/subject/1295124/">
+          《辛德勒的名单》史蒂文·斯皮尔伯格救人于水火
         </a>
       </li>
       <li>9
-        <a href="javascript:;">
-          《围城》钱钟书著
+        <a href="https://movie.douban.com/subject/3541415/">
+          《盗梦空间》克里斯托弗·诺兰梦里的无限可能
         </a>
       </li>
       <li>10
-        <a href="javascript:;">
-          《朝花夕拾》鲁迅著
+        <a href="https://movie.douban.com/subject/3011091/">
+          《忠犬八公的故事》拉斯·霍尔斯道姆
         </a>
       </li>
-      <span class="more-Infos">查看更多推荐书籍 ></span>
     </ul>
+    <a href="https://movie.douban.com/top250">
+      <span class="more-Infos">查看更多推荐电影 ></span>
+    </a>
+    
   </div>
 </div>
 </template>
@@ -78,7 +84,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 * {
   margin: 0;
   padding: 0;
@@ -88,14 +94,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html {
-  font-size: 5.33333333vw;
   background-color: white;
-}
-.clearfix::before,
-.clearfix::after {
-  content: '';
-  display: table;
-  clear: both;
 }
 input {
   outline: none;
@@ -103,100 +102,98 @@ input {
 a {
   text-decoration: none;
 }
+
 .in-search {
-  width: 100%;
-  height: 5rem;
-  float: left;
-  position: relative;
-  line-height: 5rem;
+  width: 100vw;
+  height: 80/40rem;
+  // background: gold;
+  margin: 150/40rem 0;
+  .into-search {
+    width: 90vw;
+    height: 80/40rem;
+    // border: 1px solid whitesmoke;
+    border-radius: 10/40rem;
+    background: whitesmoke;
+    line-height: 76/40rem;
+    display: flex;
+    margin: 0 auto;
+    i {
+      display: inline-block;
+      width: 80/40rem;
+      height: 80/40rem;
+      background: url("~@/assets/img/Search/bigger.svg") no-repeat;
+      background-size:50/40rem;
+      background-position: center center;
+      border-right: 1px solid rgb(158, 158, 158);
+    }
+    .inp {
+      width: 80vw;
+      border: 0;
+      font-size: 40/40rem;
+      background: whitesmoke;
+      padding-left: 0.3rem;
+    }
+    .btn {
+      width: 3rem;
+      height: 2rem;
+      background-image: linear-gradient(to left bottom, pink, #e67689);
+      border: none;
+      padding: 0;
+      font-size: 30/40rem;
+      outline: none;
+      color: white;
+    }
+  }
 }
-.in-search .into-search {
-  width: 90%;
-  height: 2rem;
-  border: 1px solid whitesmoke;
-  border-radius: 3px;
-  background: whitesmoke;
-  line-height: 2rem;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 1rem;
-  margin: auto 0;
+
+
+// user-like部分
+.like-Infos{
+  .font-spans {
+    font-size: 40/40rem;
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+  .books-Infos {
+    background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 192, 203, 0.473));
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 10/40rem;
+    li {
+      width: 100%;
+      height: 2rem;
+      line-height: 2rem;
+      color: #807878;
+      font-weight: 650;
+      margin-top: 20/40rem;
+      a {
+        color: black;
+        font-size: 28/40rem;
+        span {
+          font-size: 0.6rem;
+          color: white;
+          font-weight: normal;
+          border-radius: 3px;
+        }
+        .infos-bao {
+          background: linear-gradient(to top right, red, #e0970f);
+        }
+        .infos-new {
+          background: linear-gradient(to top right, #f00c0c, #d409d4);
+        }
+        .infos-hot {
+          background: linear-gradient(to top right, red, yellow);
+        }
+      }
+    }
+  } 
 }
-.in-search .into-search i {
-  position: absolute;
-  width: 30px;
-  height: 100%;
-  background: url("~@/assets/img/Search/icons.png") no-repeat;
-  background-position: 0px -342px;
-  margin: 0 8px;
-  margin-right: 0;
-  border-right: 1px solid rgb(158, 158, 158);
-}
-.in-search .into-search .inp {
-  width: 10rem;
-  border: 0;
-  outline: none;
-  font-size: 14px;
-  margin-left: 40px ;
-  background: whitesmoke;
-  padding-left: 0.2rem;
-}
-.in-search .into-search .btn {
-  width: 3rem;
-  height: 2rem;
-  background-image: linear-gradient(to left bottom, pink, #e67689);
-  border: none;
-  padding: 0;
-  font-size: 14px;
-  position: absolute;
-  outline: none;
-  color: white;
-  right: -1px;
-  /* bottom: 1px; */
-}
-.like-Infos .font-spans {
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding-left: 1rem;
-}
-.like-Infos .books-Infos {
-  background-image: linear-gradient(to top right, rgba(255, 255, 255, 0.5), rgba(255, 192, 203, 0.473));
+
+.more-Infos{
+  display: block;
   margin-top: 1rem;
-  padding-left: 1rem;
-  border-radius: 3px;
-}
-.like-Infos .books-Infos .more-Infos {
-  font-size: 0.8rem;
-  padding-left: 4rem;
-  color: red;
-  cursor: pointer;
-}
-.like-Infos .books-Infos li {
-  width: 100%;
-  height: 2rem;
-  line-height: 2rem;
-  color: #807878;
-  font-weight: 650;
-  margin-top: 20px;
-}
-.like-Infos .books-Infos li a {
-  color: black;
-  font-size: 0.9rem;
-}
-.like-Infos .books-Infos li a span {
-  font-size: 0.6rem;
-  color: white;
-  font-weight: normal;
-  border-radius: 3px;
-}
-.like-Infos .books-Infos li a .infos-bao {
-  background: linear-gradient(to top right, red, #e0970f);
-}
-.like-Infos .books-Infos li a .infos-new {
-  background: linear-gradient(to top right, #f00c0c, #d409d4);
-}
-.like-Infos .books-Infos li a .infos-hot {
-  background: linear-gradient(to top right, red, yellow);
+  text-align: center;
+  color: rgb(128, 120, 120);
+  font-size: 28/40rem;
 }
 </style>

@@ -62,26 +62,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   /* 文字均等分 */
   .tab-bar-item{
     flex:1;
-    text-align: center;
+    text-align: center; 
     /* 正常情况下，所有的导航栏的高度均为49px */
-    height: 49px;
-    font-size: 14px;
-  }
-
-  /* 设置图片大小 */
-  .tab-bar-item img{
-    width: 24px;
-    height: 24px;
-    margin-top: 3px;
+    height: 100/40rem;
+    font-size: 28/40rem;
+    /* 设置图片大小 */
+    img{
+    width: 48/40rem;
+    height: 48/40rem;
+    margin-top: 10/40rem;
     /* 导入图片后会出现3px的空白像素区域 */
     vertical-align: middle;
+    }
   }
-/* 
-  .active{
-    color: red;
-  } */
+
+  
+
+
 </style>
